@@ -23,7 +23,10 @@ class UsersSeeder extends Seeder
                 'password' => bcrypt("pass123"),
             ];
             // create admin
-            User::create($data);
+            $user = User::create($data);
+            $daysAgo = rand(0,300);
+            $user->created_at = date("Y-m-d H:i:s", strtotime("- $daysAgo days"));
+            $user->save();
         }
     }
 }
