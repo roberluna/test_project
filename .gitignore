@@ -21,3 +21,12 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+
+.editorconfig
+.env.example
+.gitattributes
+.idea/
+.styleci.yml
+CHANGELOG.md
+database/.gitignore
+storage/framework/.gitignore
