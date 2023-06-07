@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +12,4 @@
 |
 */
 
-Route::get('/', function () {
-    die("hello");
-});
+Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);

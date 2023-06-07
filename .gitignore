@@ -23,7 +23,6 @@ Homestead.json
 .phpunit.result.cache
 
 .editorconfig
-.env.example
 .gitattributes
 .idea/
 .styleci.yml
