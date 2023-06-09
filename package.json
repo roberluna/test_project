@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.7.14"
     },
     "dependencies": {
+        "laravel-vue-pagination": "^4.1.0",
         "pinia": "^2.0.29",
         "vue-router": "^3.5.2",
         "vuetify": "^2.6.12",

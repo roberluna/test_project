@@ -21,8 +21,8 @@ class UsersSeeder extends Seeder
                 'last_name' => $faker->lastName, // make sure you create first_name and last_name first in the db, then seed
                 'email' => $faker->email,
                 'password' => bcrypt("pass123"),
+                'status' => true,
             ];
-            // create admin
             $user = User::create($data);
             $daysAgo = rand(0,300);
             $user->created_at = date("Y-m-d H:i:s", strtotime("- $daysAgo days"));

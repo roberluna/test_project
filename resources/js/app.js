@@ -8,7 +8,7 @@ require('./bootstrap');
 
 import Vue from 'vue';
 import Vuetify from './vuetify';
-import App from './home/App.vue';
+import App from './App.vue';
 
 /**
  * The following block of code may be used to automatically register your
@@ -27,8 +27,13 @@ import App from './home/App.vue';
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import store from './store';
+import router from './routes'
+
 new Vue({
 	components: { app: App },
 	el: '#app',
 	vuetify: Vuetify,
+	router,
+	store
 });

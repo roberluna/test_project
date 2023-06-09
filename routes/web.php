@@ -12,4 +12,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+
+
+Route::get('/users', ['as' => 'home', 'uses' => 'HomeController@index']);
+
+
+Route::post('/users/destroy', 'HomeController@destroy');
+
+Route::post('/users/store', 'HomeController@store');
+
+Route::get('/users/show/{id}', 'HomeController@show');
+
+Route::post('/users/update', 'HomeController@update');
+
+
+Route::get('/{any?}', function () {
+    return view('home');
+})->name('basepath')
+->where('any', '.*');
