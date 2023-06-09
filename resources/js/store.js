@@ -1,16 +1,20 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        page: 0,
         message: {
             snackbar: false,
             description: "",
             color: "",
         },
+        pagination: {
+			current: 1,
+			total: 0
+		},
     },
     mutations: {
         showMessage(state, message) {
@@ -21,5 +25,10 @@ export default new Vuex.Store({
         hideMessage(state) {
             state.message.snackbar = false;
         },
-    }
+        setPageState(state, pagination) {
+            state.pagination.current = pagination.current;
+            state.pagination.total = pagination.total;
+        },
+    },
+    plugins: [createPersistedState()]
 })

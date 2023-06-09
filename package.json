@@ -28,6 +28,7 @@
         "pinia": "^2.0.29",
         "vue-router": "^3.5.2",
         "vuetify": "^2.6.12",
-        "vuex": "^3.5.1"
+        "vuex": "^3.5.1",
+        "vuex-persistedstate": "^4.1.0"
     }
 }
